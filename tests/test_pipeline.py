@@ -1,28 +1,30 @@
+from src import pipeline
 from src.matching.models import Skill
-from src.ui import app
 
 
 def test_analyze_resume_uses_taxonomy_and_strips_contact_from_similarity(
     monkeypatch,
 ):
-    observed = {}
+    observed: dict[str, str] = {}
     taxonomy = {
         "python": Skill("Python", "Programming"),
         "docker": Skill("Docker", "Cloud/DevOps"),
     }
 
     monkeypatch.setattr(
-        app, "_read_resume", lambda *_: "Email: student@example.com\nPython developer"
+        pipeline,
+        "_read_resume",
+        lambda *_: "Email: student@example.com\nPython developer",
     )
-    monkeypatch.setattr(app, "get_taxonomy", lambda: taxonomy)
+    monkeypatch.setattr(pipeline, "_load_taxonomy", lambda: taxonomy)
 
-    def fake_similarity(resume, jd):
+    def fake_similarity(resume: str, jd: str) -> tuple[float, str]:
         observed.update(resume=resume, jd=jd)
         return 0.5, "tfidf"
 
-    monkeypatch.setattr(app, "semantic_similarity", fake_similarity)
+    monkeypatch.setattr(pipeline, "semantic_similarity", fake_similarity)
 
-    result = app.analyze_resume(
+    result = pipeline.analyze_resume(
         "resume.pdf",
         b"%PDF-fake",
         "Required:\nPython\nPreferred:\nDocker",

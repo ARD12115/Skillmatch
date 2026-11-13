@@ -33,7 +33,9 @@ def load_taxonomy(path: str | Path) -> dict[str, Skill]:
             or not isinstance(aliases, list)
             or any(not isinstance(alias, str) or not alias.strip() for alias in aliases)
         ):
-            raise TaxonomyError("Taxonomy entries need a name, category, and string aliases.")
+            raise TaxonomyError(
+                "Taxonomy entries need a name, category, and string aliases."
+            )
 
         skill = Skill(name=name.strip(), category=category.strip())
         normalized_name = skill.name.casefold()

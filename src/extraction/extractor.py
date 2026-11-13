@@ -51,4 +51,6 @@ def extract_skills(text: str, taxonomy: Mapping[str, Skill]) -> list[SkillHit]:
         if snippet not in hit[1] and len(hit[1]) < MAX_EVIDENCE:
             hit[1].append(snippet)
 
-    return [SkillHit(skill=skill, evidence=evidence) for skill, evidence in hits.values()]
+    return [
+        SkillHit(skill=skill, evidence=evidence) for skill, evidence in hits.values()
+    ]

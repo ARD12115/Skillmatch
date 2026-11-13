@@ -1,6 +1,6 @@
 import re
-from dataclasses import dataclass
 from collections.abc import Mapping
+from dataclasses import dataclass
 
 from src.extraction.extractor import extract_skills
 from src.matching.models import Skill, SkillHit
@@ -23,9 +23,7 @@ class JDRequirements:
     preferred: list[SkillHit]
 
 
-def split_required_preferred(
-    jd: str, taxonomy: Mapping[str, Skill]
-) -> JDRequirements:
+def split_required_preferred(jd: str, taxonomy: Mapping[str, Skill]) -> JDRequirements:
     """Split a job description by explicit section headings and extract skills."""
     lines = jd.splitlines()
     required_lines: list[str] = []

@@ -2,6 +2,7 @@ import logging
 import os
 from functools import lru_cache
 
+from requests.exceptions import RequestException
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
@@ -35,7 +36,13 @@ def semantic_similarity(
             embeddings = _load_embedding_model(model_name).encode([a, b])
             score = float(cosine_similarity([embeddings[0]], [embeddings[1]])[0][0])
             return min(1.0, max(0.0, score)), "embeddings"
-        except Exception as exc:
+        except (
+            ImportError,
+            OSError,
+            RequestException,
+            RuntimeError,
+            ValueError,
+        ) as exc:
             logger.warning(
                 "Embedding similarity unavailable (%s); using TF-IDF fallback.",
                 type(exc).__name__,

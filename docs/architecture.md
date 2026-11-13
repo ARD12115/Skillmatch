@@ -7,6 +7,10 @@
             +---------+----------+
                       |
             +---------v----------+
+            |  pipeline          |  request orchestration
+            +---------+----------+
+                      |
+            +---------v----------+
             |  matching          |  scorer, similarity, models
             +---------+----------+
                       |
@@ -20,7 +24,9 @@
    utils: errors, text cleaning, logging (used by all layers)
    data:  skills.json (taxonomy), roles/ (preset JDs), samples/ (gitignored)
 ```
-Dependencies point downward only. `ui` may call any layer through the pipeline; lower layers never import `ui`.
+Dependencies point downward only. `ui` delegates each analysis to `src/pipeline.py`;
+the pipeline coordinates parsing, extraction, and matching. Lower layers never
+import `ui`.
 
 ## Folder layout
 ```
@@ -29,7 +35,7 @@ skillmatch/
 ├── README.md
 ├── .claude/ (settings.json, commands/, skills/, agents/)
 ├── docs/
-├── src/ { parsing/, extraction/, matching/, ui/, utils/ }
+├── src/ { pipeline.py, parsing/, extraction/, matching/, ui/, utils/ }
 ├── tests/
 ├── data/ { skills.json, roles/, samples/ }
 ├── scripts/ { setup.sh, run.sh }

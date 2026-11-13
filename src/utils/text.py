@@ -2,9 +2,7 @@ import re
 
 _EMAIL = re.compile(r"\b[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}\b")
 _PHONE = re.compile(r"(?<!\w)(?:\+?\d[\d().\s-]{5,}\d)(?!\w)")
-_CONTACT_LINE = re.compile(
-    r"(?im)^\s*(?:phone|mobile|email|address|contact)\s*:\s*.*$"
-)
+_CONTACT_LINE = re.compile(r"(?im)^\s*(?:phone|mobile|email|address|contact)\s*:\s*.*$")
 
 
 def normalize_text(text: str) -> str:

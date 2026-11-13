@@ -38,9 +38,7 @@ def test_skill_listed_in_both_sections_is_required_only():
 
 
 def test_inline_heading_content_is_included():
-    result = split_required_preferred(
-        "Required: Python\nPreferred: Docker", taxonomy()
-    )
+    result = split_required_preferred("Required: Python\nPreferred: Docker", taxonomy())
 
     assert [hit.skill.name for hit in result.required] == ["Python"]
     assert [hit.skill.name for hit in result.preferred] == ["Docker"]

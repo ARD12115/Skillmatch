@@ -21,7 +21,12 @@ def test_extracts_text(monkeypatch):
     monkeypatch.setattr(
         pdf_parser.pdfplumber,
         "open",
-        lambda _: FakePdf([SimpleNamespace(extract_text=lambda: "Python"), SimpleNamespace(extract_text=lambda: "SQL")]),
+        lambda _: FakePdf(
+            [
+                SimpleNamespace(extract_text=lambda: "Python"),
+                SimpleNamespace(extract_text=lambda: "SQL"),
+            ]
+        ),
     )
 
     assert pdf_parser.extract_text_from_pdf(b"%PDF-content") == "Python\nSQL"
@@ -43,7 +48,8 @@ def test_page_limit_is_enforced(monkeypatch):
         pdf_parser.pdfplumber,
         "open",
         lambda _: FakePdf(
-            [SimpleNamespace(extract_text=lambda: "text")] * (pdf_parser.MAX_PDF_PAGES + 1)
+            [SimpleNamespace(extract_text=lambda: "text")]
+            * (pdf_parser.MAX_PDF_PAGES + 1)
         ),
     )
 

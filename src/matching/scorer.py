@@ -25,13 +25,17 @@ def score(
         return item.skill if isinstance(item, SkillHit) else item
 
     resume_by_name = {hit.skill.name.casefold(): hit for hit in resume_hits}
-    required = {as_skill(item).name.casefold(): as_skill(item) for item in jd_required}
+    required = {}
+    for item in jd_required:
+        skill = as_skill(item)
+        required[skill.name.casefold()] = skill
     required_names = set(required)
-    preferred = {
-        as_skill(item).name.casefold(): as_skill(item)
-        for item in jd_preferred
-        if as_skill(item).name.casefold() not in required_names
-    }
+    preferred = {}
+    for item in jd_preferred:
+        skill = as_skill(item)
+        name = skill.name.casefold()
+        if name not in required_names:
+            preferred[name] = skill
     preferred_names = set(preferred)
     matched_required = required_names & resume_by_name.keys()
     matched_preferred = preferred_names & resume_by_name.keys()
@@ -54,16 +58,14 @@ def score(
     )
 
     jd_names = required_names | preferred_names
-    matched_names = (matched_required | matched_preferred)
+    matched_names = matched_required | matched_preferred
     matched = [resume_by_name[name] for name in resume_by_name if name in matched_names]
     missing = [
         skill
         for name, skill in [*required.items(), *preferred.items()]
         if name not in resume_by_name
     ]
-    extra = [
-        hit.skill for name, hit in resume_by_name.items() if name not in jd_names
-    ]
+    extra = [hit.skill for name, hit in resume_by_name.items() if name not in jd_names]
     breakdown = ScoreBreakdown(
         required_coverage=required_coverage,
         preferred_coverage=preferred_coverage,

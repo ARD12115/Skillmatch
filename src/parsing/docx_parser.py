@@ -17,7 +17,10 @@ def extract_text_from_docx(data: bytes) -> str:
             members = archive.infolist()
             if len(members) > MAX_DOCX_MEMBERS:
                 raise ParseError("DOCX archive contains too many files.")
-            if sum(member.file_size for member in members) > MAX_DOCX_UNCOMPRESSED_BYTES:
+            if (
+                sum(member.file_size for member in members)
+                > MAX_DOCX_UNCOMPRESSED_BYTES
+            ):
                 raise ParseError("DOCX contents exceed the safe parsing limit.")
         document = Document(BytesIO(data))
         parts = [paragraph.text for paragraph in document.paragraphs]

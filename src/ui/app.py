@@ -6,61 +6,14 @@ import pandas as pd
 import streamlit as st
 from dotenv import load_dotenv
 
-from src.extraction.extractor import extract_skills
-from src.extraction.jd_parser import JDRequirements, split_required_preferred
-from src.extraction.taxonomy import load_taxonomy
 from src.matching.models import MatchResult
-from src.matching.scorer import score
-from src.matching.similarity import semantic_similarity
-from src.parsing.docx_parser import extract_text_from_docx
-from src.parsing.pdf_parser import extract_text_from_pdf
-from src.parsing.validators import max_upload_bytes, validate_upload
+from src.parsing.validators import max_upload_bytes
+from src.pipeline import analyze_resume
 from src.utils.errors import SkillMatchError
-from src.utils.text import remove_contact_details
 
 ROOT = Path(__file__).resolve().parents[2]
 LOGGER = logging.getLogger(__name__)
 load_dotenv(ROOT / ".env")
-
-
-@st.cache_resource
-def get_taxonomy():
-    return load_taxonomy(ROOT / "data" / "skills.json")
-
-
-def _read_resume(name: str, data: bytes) -> str:
-    validate_upload(name, data)
-    suffix = Path(name).suffix.casefold()
-    if suffix == ".pdf":
-        return extract_text_from_pdf(data)
-    if suffix == ".docx":
-        return extract_text_from_docx(data)
-    raise SkillMatchError("Upload a PDF or DOCX resume.")
-
-
-def analyze_resume(name: str, data: bytes, jd: str) -> MatchResult:
-    """Run the local resume-to-job matching pipeline for one upload."""
-    resume_text = _read_resume(name, data)
-    taxonomy = get_taxonomy()
-    resume_hits = extract_skills(resume_text, taxonomy)
-    requirements = split_required_preferred(jd, taxonomy)
-    if not requirements.required and not requirements.preferred:
-        raise SkillMatchError(
-            "No recognized skills were found in this job description. "
-            "Try a more detailed JD or a preset role."
-        )
-    clean_resume = remove_contact_details(resume_text)
-    clean_jd = remove_contact_details(jd)
-    similarity, method = semantic_similarity(clean_resume, clean_jd)
-    result = score(
-        resume_hits,
-        requirements.required,
-        requirements.preferred,
-        similarity,
-        method,
-    )
-    LOGGER.info("Analysis complete: parsed resume and identified %d skills.", len(resume_hits))
-    return result
 
 
 def _render_results(result: MatchResult, label: str = "") -> None:
@@ -144,7 +97,9 @@ def main() -> None:
         "SkillMatch is decision support, not a hiring decision. Files are processed "
         "locally for this analysis and are not saved by the app."
     )
-    st.caption(f"Maximum upload size: {max_upload_bytes() // (1024 * 1024)} MB per file.")
+    st.caption(
+        f"Maximum upload size: {max_upload_bytes() // (1024 * 1024)} MB per file."
+    )
 
     single_tab, batch_tab = st.tabs(["Single resume", "Batch ranking"])
     with single_tab:
@@ -165,9 +120,11 @@ def main() -> None:
                     _render_results(result)
                 except SkillMatchError as exc:
                     _show_error(exc)
-                except Exception as exc:
+                # This UI boundary hides unexpected dependency details from users.
+                except Exception as exc:  # noqa: BLE001
                     LOGGER.error(
-                        "Unexpected error analyzing a resume (%s).", type(exc).__name__
+                        "Unexpected error analyzing a resume (%s).",
+                        type(exc).__name__,
                     )
                     st.error("Something went wrong while analyzing this resume.")
 
@@ -189,15 +146,20 @@ def main() -> None:
                 results: list[tuple[str, MatchResult]] = []
                 for uploaded in uploads:
                     try:
-                        result = analyze_resume(uploaded.name, uploaded.getvalue(), batch_jd)
+                        result = analyze_resume(
+                            uploaded.name, uploaded.getvalue(), batch_jd
+                        )
                         rows.append(
-                            {"Resume": uploaded.name, "Score": result.breakdown.final_score}
+                            {
+                                "Resume": uploaded.name,
+                                "Score": result.breakdown.final_score,
+                            }
                         )
                         results.append((uploaded.name, result))
                     except SkillMatchError as exc:
                         st.text(f"Resume: {uploaded.name}")
                         st.warning(str(exc))
-                    except Exception as exc:
+                    except Exception as exc:  # noqa: BLE001
                         LOGGER.error(
                             "Unexpected error in batch analysis (%s).",
                             type(exc).__name__,

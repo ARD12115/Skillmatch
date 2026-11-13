@@ -54,6 +54,7 @@ class MatchResult:
 ## 4. Module interfaces
 | Module | Function | Notes |
 |---|---|---|
+| `src/pipeline.py` | `analyze_resume(name, data, jd) -> MatchResult` | Orchestrates the local analysis; no UI logic |
 | `parsing/pdf_parser.py` | `extract_text_from_pdf(data: bytes) -> str` | Raises `EmptyDocumentError` if no text |
 | `parsing/docx_parser.py` | `extract_text_from_docx(data: bytes) -> str` | Should |
 | `parsing/validators.py` | `validate_upload(name: str, data: bytes) -> None` | Type, size, magic bytes |

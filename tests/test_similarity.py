@@ -26,7 +26,9 @@ def test_embedding_failure_uses_logged_tfidf_fallback(monkeypatch, caplog):
         raise OSError("model unavailable")
 
     monkeypatch.setattr(similarity, "_load_embedding_model", fail)
-    value, method = similarity.semantic_similarity("Python", "Python", use_embeddings=True)
+    value, method = similarity.semantic_similarity(
+        "Python", "Python", use_embeddings=True
+    )
 
     assert value == 1.0
     assert method == "tfidf"
