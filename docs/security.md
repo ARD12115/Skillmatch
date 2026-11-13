@@ -10,8 +10,8 @@ Resumes contain personal data (name, phone, email, address). Treat them as sensi
 ## 2. Threats and controls
 | # | Threat | Control |
 |---|---|---|
-| 1 | Malicious upload (disguised file, huge file, PDF bombs) | Validate extension AND magic bytes (`%PDF`, `PK` for DOCX); `MAX_UPLOAD_MB` (default 5); page cap (e.g. 10 pages); parse inside try/except with a timeout where possible |
-| 2 | XSS via resume text shown in UI | Render user text with `st.text`/`st.write`; never `unsafe_allow_html=True` with user content |
+| 1 | Malicious upload (disguised file, huge file, PDF bombs, DOCX zip bombs) | Validate extension AND magic bytes (`%PDF`, `PK` for DOCX); enforce `MAX_UPLOAD_MB` (default 5) and a PDF page cap (10 pages); before parsing DOCX, cap both each archive member's uncompressed size (10 MB) and the total uncompressed size (25 MB); handle parse errors clearly |
+| 2 | XSS or remote content via resume text shown in UI | Render untrusted user text only with `st.text`; never use Markdown or `unsafe_allow_html=True` for user content |
 | 3 | Code injection | No `eval`, `exec`, `pickle.load` or shell calls on user-controlled data |
 | 4 | PII leakage via logs | Log only events and counts (e.g. "parsed 2 pages, 14 skills"); never resume text, names, emails, phones |
 | 5 | PII at rest | Don't write uploads to disk; if a temp file is unavoidable, delete it in a `finally` block |

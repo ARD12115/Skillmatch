@@ -32,15 +32,14 @@ def test_closer_resume_scores_higher_and_reports_missing_and_extra():
 
 
 def test_empty_requirements_and_preferred_redistribution():
-    no_requirements = score([hit("Python")], [], [], semantic_similarity=0)
     preferred_only = score(
         [hit("Python")], [], [hit("Python")], semantic_similarity=0.5
     )
 
-    assert no_requirements.breakdown.required_coverage == 1.0
-    assert no_requirements.breakdown.final_score == pytest.approx(80)
     assert preferred_only.breakdown.preferred_coverage == 1.0
     assert preferred_only.breakdown.final_score == pytest.approx(90)
+    with pytest.raises(ValueError, match="no recognized skills"):
+        score([hit("Python")], [], [], semantic_similarity=0)
 
 
 def test_semantic_similarity_must_be_in_range():

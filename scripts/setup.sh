@@ -18,4 +18,4 @@ except Exception as exc:
         f"({type(exc).__name__}); the app will use TF-IDF fallback."
     )
 PY
-echo "Setup done. Run: streamlit run src/ui/app.py"
+echo "Setup done. Run: bash scripts/run.sh"

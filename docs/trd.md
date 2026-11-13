@@ -61,17 +61,18 @@ class MatchResult:
 | `extraction/taxonomy.py` | `load_taxonomy(path) -> dict[str, Skill]` | Loads `data/skills.json` (skill, category, aliases) |
 | `extraction/extractor.py` | `extract_skills(text: str, taxonomy) -> list[SkillHit]` | Word-boundary match, alias map, fuzzy for typos |
 | `extraction/jd_parser.py` | `split_required_preferred(jd: str, taxonomy)` | "Required" vs "Preferred/Good to have" sections |
-| `matching/similarity.py` | `semantic_similarity(a: str, b: str) -> tuple[float, str]` | Embeddings, falls back to TF-IDF; returns method |
+| `matching/similarity.py` | `semantic_similarity(resume_skills: str, jd_skills: str) -> tuple[float, str]` | Inputs contain only canonical skill labels; exclude personal names and all demographic/contact details before scoring. Identical skill sets must yield equal similarity regardless of those details. Embeddings fall back to TF-IDF; returns method. |
 | `matching/scorer.py` | `score(resume_hits, jd_required, jd_preferred, sim) -> MatchResult` | Formula below |
 | `ui/app.py` | Streamlit entry point | No business logic |
 
 ## 5. Scoring formula
 ```
-required_coverage  = |matched required| / |required|        (1.0 if no required skills)
+if |required| + |preferred| == 0: reject the JD as insufficient information; do not produce a match score
+required_coverage  = |matched required| / |required|        (1.0 if no required skills but preferred skills exist)
 preferred_coverage = |matched preferred| / |preferred|       (0 if none)
 final = 100 * (0.60*required_coverage + 0.20*preferred_coverage + 0.20*semantic_similarity)
 ```
-Weights live in one constant (`WEIGHTS`) so they can be tuned against the test resumes. If the JD has no preferred skills, redistribute that 0.20 to required coverage.
+Weights live in one constant (`WEIGHTS`). If required skills exist but no preferred skills, redistribute that 0.20 to required coverage. Tune only on the tuning set; report evaluation metrics from a separate unseen set after tuning is complete.
 
 ## 6. Skill extraction approach
 1. Normalize text (lowercase, collapse whitespace, keep `c++`, `c#`, `.net`, `node.js`).

@@ -4,7 +4,7 @@ The event runs 9:30 AM - 4:30 PM (about 7 hours). If you start late, cut from th
 
 | ID | Ticket | Priority | Est. | Done when |
 |---|---|---|---|---|
-| T-01 | Project setup: venv, requirements, run "hello" Streamlit page | Must | 15m | `streamlit run src/ui/app.py` opens |
+| T-01 | Project setup: venv, requirements, run "hello" Streamlit page | Must | 15m | `bash scripts/run.sh` opens the app |
 | T-02 | Skill taxonomy `data/skills.json` (~100 skills + aliases) | Must | 45m | Loads via `load_taxonomy` |
 | T-03 | Upload validation + PDF text extraction | Must | 45m | Sample PDF -> text; bad files rejected |
 | T-04 | Skill extractor with evidence snippets | Must | 60m | Tests pass for aliases and `C++` |

@@ -12,7 +12,6 @@ from src.parsing.docx_parser import extract_text_from_docx
 from src.parsing.pdf_parser import extract_text_from_pdf
 from src.parsing.validators import validate_upload
 from src.utils.errors import SkillMatchError
-from src.utils.text import remove_contact_details
 
 ROOT = Path(__file__).resolve().parents[1]
 LOGGER = logging.getLogger(__name__)
@@ -44,9 +43,11 @@ def analyze_resume(name: str, data: bytes, jd: str) -> MatchResult:
             "No recognized skills were found in this job description. "
             "Try a more detailed JD or a preset role."
         )
-    clean_resume = remove_contact_details(resume_text)
-    clean_jd = remove_contact_details(jd)
-    similarity, method = semantic_similarity(clean_resume, clean_jd)
+    resume_skill_text = " ".join(hit.skill.name for hit in resume_hits)
+    jd_skill_text = " ".join(
+        hit.skill.name for hit in requirements.required + requirements.preferred
+    )
+    similarity, method = semantic_similarity(resume_skill_text, jd_skill_text)
     result = score(
         resume_hits,
         requirements.required,

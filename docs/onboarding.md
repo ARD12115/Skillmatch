@@ -4,9 +4,10 @@
 ```bash
 git clone <repo-url> && cd skillmatch
 bash scripts/setup.sh        # venv, deps, caches embedding model
-streamlit run src/ui/app.py
+bash scripts/run.sh
 ```
-Windows: use WSL, or run the commands inside `scripts/setup.sh` manually in PowerShell.
+Windows: create the venv and install `requirements.txt` in PowerShell, then run
+`bash scripts/run.sh` from Git Bash or WSL.
 
 ## Using Claude Code (optional)
 ```bash
@@ -19,7 +20,7 @@ Subagents: `code-reviewer`, `test-writer`, `security-auditor`. Read `CLAUDE.md` 
 ## Workflow
 1. Pick a ticket from `docs/tickets.md`.
 2. Branch: `feat/T-04-skill-extractor`.
-3. Build + tests, run `ruff check . --fix` and `pytest -q`.
+3. Build + tests, run `ruff check .`, `ruff format --check .`, and `pytest -q`.
 4. Commit, merge, tell the team.
 
 ## Rules of the road

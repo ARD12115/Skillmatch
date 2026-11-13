@@ -23,7 +23,7 @@
       {
         "matcher": "Edit|Write",
         "hooks": [
-          { "type": "command", "command": "ruff check src tests --fix --quiet || true" }
+          { "type": "command", "command": "ruff check src tests --quiet || true" }
         ]
       }
     ]

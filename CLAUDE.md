@@ -13,13 +13,13 @@ Everything runs locally and offline after setup. No resume data leaves the machi
 
 ## Commands
 - Setup: `bash scripts/setup.sh`
-- Run app: `streamlit run src/ui/app.py`
+- Run app: `bash scripts/run.sh`
 - Tests: `pytest -q`
-- Lint/format: `ruff check . --fix && ruff format .`
+- Lint/format: `ruff check . && ruff format --check .`
 
 ## Conventions
 - Type hints on all public functions; small pure functions; one responsibility per module.
-- Layers: `parsing` (file -> text) -> `extraction` (text -> skills) -> `matching` (skills + text -> score) -> `ui`. UI never contains logic.
+- Layers: `parsing` (file -> text) -> `extraction` (text -> skills) -> `matching` (skills + skill-only similarity -> score) -> `ui`. UI never contains logic.
 - Data contracts live in `src/matching/models.py` (dataclasses). Don't pass raw dicts between layers.
 - Errors: raise typed exceptions from `src/utils/errors.py`; the UI turns them into friendly messages.
 

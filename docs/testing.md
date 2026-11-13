@@ -11,12 +11,12 @@
 | similarity | identical text ~1.0, unrelated text low, fallback path works when embeddings are off |
 
 ## 2. Evaluation set (for "test results")
-1. Collect ~20 **synthetic or consented** resumes (mix of CSE branches, strong/average/weak).
-2. Pick 2-3 JDs (e.g. Python Developer, Web Developer, Data Analyst).
-3. For each resume, one team member lists the true skills by hand (ground truth).
-4. Run extraction; compute precision and recall per resume and on average.
-5. Manually rank 5 resumes per JD; compare with the system's ranking (top-3 overlap).
-6. Record results in a table in the presentation. Tune `WEIGHTS` and aliases using failures.
+1. Collect separate **synthetic or consented** tuning and evaluation resume sets, with no overlap. Use the tuning set to develop aliases and adjust `WEIGHTS`.
+2. Before evaluating, freeze the taxonomy, aliases, and weights. Reserve an unseen set of ~20 resumes (mix of CSE branches, strong/average/weak) for evaluation only.
+3. Pick 2-3 JDs (e.g. Python Developer, Web Developer, Data Analyst); for each evaluation resume, have a team member list true skills by hand as ground truth.
+4. Run extraction on the unseen evaluation set and compute precision and recall per resume and on average. Do not use these evaluation results to retune the same run.
+5. Manually rank 5 evaluation resumes per JD; compare with the system's ranking (top-3 overlap).
+6. Report only metrics from the unseen evaluation set in the presentation. Any changes informed by those results require a new unseen evaluation set.
 
 | Resume | True skills | Found | Precision | Recall |
 |---|---|---|---|---|

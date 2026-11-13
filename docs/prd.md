@@ -86,7 +86,7 @@ Basic working prototype · source code · problem description · 5-minute demons
 |---|---|
 | Resume PDFs with messy layouts (two columns) | Test several formats early; use pdfplumber with a PyMuPDF fallback if needed |
 | Scanned PDFs have no text | Detect and show "text-based PDFs only" message; OCR is a Stage 2 idea |
-| Judges say "just keyword matching" | Demo "ML" = "machine learning" and the semantic score |
+| Judges say "just keyword matching" | Demonstrate taxonomy alias recognition ("ML" -> "Machine Learning") and explain the separate skill-similarity component |
 | Embedding model not cached at venue | Pre-download in setup.sh; TF-IDF fallback |
 | Resume screening is a popular pick | Differentiate via skill-gap framing and explainability |
 

@@ -37,6 +37,8 @@ def score(
         if name not in required_names:
             preferred[name] = skill
     preferred_names = set(preferred)
+    if not required_names and not preferred_names:
+        raise ValueError("Job description has no recognized skills to score.")
     matched_required = required_names & resume_by_name.keys()
     matched_preferred = preferred_names & resume_by_name.keys()
     required_coverage = (

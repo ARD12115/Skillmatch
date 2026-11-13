@@ -7,16 +7,18 @@ Resume screening and skill matching for students. Built for CSE-HackSpark-2026 (
 ## Quick start
 ```bash
 bash scripts/setup.sh
-streamlit run src/ui/app.py
+bash scripts/run.sh
 ```
 
-On Windows PowerShell, create and activate a virtual environment, then install the
-same dependencies:
+On Windows, create the environment and install dependencies in PowerShell, then
+run the app from Git Bash or WSL with the repository runner:
 ```powershell
 py -3.11 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
-streamlit run src/ui/app.py
+```
+```bash
+bash scripts/run.sh
 ```
 To preload semantic embeddings on Windows when internet is available, run:
 ```powershell

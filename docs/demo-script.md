@@ -6,7 +6,7 @@
 | 0:30 | Show the app | "SkillMatch runs fully on this laptop. Nothing leaves it." |
 | 1:00 | Upload sample resume + pick Python Developer | "Here's a typical student resume." |
 | 1:30 | Result | "72/100. Matched, missing and extra skills — color and symbol coded." |
-| 2:15 | Semantic proof | "The resume says 'ML'; the JD says 'machine learning'. We still match it." |
+| 2:15 | Alias matching | "The resume says 'ML'; our curated taxonomy recognizes it as the 'Machine Learning' skill." |
 | 2:45 | Explain | "Open 'Why this score?': 60% required skills, 20% preferred, 20% semantic similarity, with evidence from the resume." |
 | 3:15 | Batch (if built) | "Placement cell uploads 5 resumes — ranked in seconds." |
 | 3:45 | Accuracy | "On 20 test resumes: recall X%, precision Y%." |
