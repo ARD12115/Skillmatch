@@ -10,6 +10,25 @@ bash scripts/setup.sh
 streamlit run src/ui/app.py
 ```
 
+On Windows PowerShell, create and activate a virtual environment, then install the
+same dependencies:
+```powershell
+py -3.11 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+streamlit run src/ui/app.py
+```
+To preload semantic embeddings on Windows when internet is available, run:
+```powershell
+python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')"
+```
+Copy `.env.example` to `.env` to adjust supported local settings such as the upload
+limit (the server enforces a 5 MB maximum).
+
+The app supports PDF and DOCX resumes, preset roles or a pasted job description,
+explainable single-resume results, and batch ranking with CSV download. If the
+embedding model is unavailable, text similarity falls back to local TF-IDF.
+
 ## Docs
 See `docs/` — start with `prd.md`, then `trd.md`. Claude Code config is in `.claude/` and `CLAUDE.md`.
 
