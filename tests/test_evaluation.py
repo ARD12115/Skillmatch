@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 """Test wrapper to run evaluation via pytest."""
+
 import sys
 from pathlib import Path
 
@@ -9,9 +10,11 @@ sys.path.insert(0, str(ROOT))
 
 from scripts.evaluate import evaluate
 
+
 def test_evaluation():
     """Run the full evaluation and assert minimum metrics."""
     evaluate()
+
 
 if __name__ == "__main__":
     test_evaluation()

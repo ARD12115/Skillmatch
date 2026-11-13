@@ -37,6 +37,15 @@ def _render_results(result: MatchResult, label: str = "") -> None:
         for skill in result.extra:
             st.write(f"• {skill.name}")
 
+    # T-13: Top-5 missing skills to prioritize
+    if result.missing:
+        st.markdown("---")
+        st.markdown("**🎯 Top skills to add for biggest score boost**")
+        for i, skill in enumerate(result.missing[:5], 1):
+            st.write(f"{i}. **{skill.name}** — add to resume to improve match")
+    else:
+        st.success("All key skills covered!")
+
     with st.expander("Why this score?"):
         breakdown = result.breakdown
         st.write(

@@ -32,6 +32,34 @@ def _read_resume(name: str, data: bytes) -> str:
     raise SkillMatchError("Upload a PDF or DOCX resume.")
 
 
+def analyze_resume_text(resume_text: str, jd: str) -> MatchResult:
+    """Run the pipeline on raw resume text (for evaluation/testing)."""
+    taxonomy = _load_taxonomy()
+    resume_hits = extract_skills(resume_text, taxonomy)
+    requirements = split_required_preferred(jd, taxonomy)
+    if not requirements.required and not requirements.preferred:
+        raise SkillMatchError(
+            "No recognized skills were found in this job description. "
+            "Try a more detailed JD or a preset role."
+        )
+    resume_skill_text = " ".join(hit.skill.name for hit in resume_hits)
+    jd_skill_text = " ".join(
+        hit.skill.name for hit in requirements.required + requirements.preferred
+    )
+    similarity, method = semantic_similarity(resume_skill_text, jd_skill_text)
+    result = score(
+        resume_hits,
+        requirements.required,
+        requirements.preferred,
+        similarity,
+        method,
+    )
+    LOGGER.info(
+        "Analysis complete: parsed resume and identified %d skills.", len(resume_hits)
+    )
+    return result
+
+
 def analyze_resume(name: str, data: bytes, jd: str) -> MatchResult:
     """Run the local resume-to-job matching pipeline for one upload."""
     resume_text = _read_resume(name, data)

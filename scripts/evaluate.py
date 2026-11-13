@@ -8,7 +8,7 @@ import json
 from pathlib import Path
 
 from src.extraction.taxonomy import load_taxonomy
-from src.pipeline import analyze_resume
+from src.pipeline import analyze_resume_text
 
 ROOT = Path(__file__).resolve().parents[1]
 SAMPLES_DIR = ROOT / "data" / "samples"
@@ -569,7 +569,7 @@ def evaluate():
 
         for jd_name, jd_text in jds.items():
             try:
-                result = analyze_resume(resume_name, resume_text.encode(), jd_text)
+                result = analyze_resume_text(resume_text, jd_text)
 
                 # Extract predicted skills
                 matched_names = {hit.skill.name for hit in result.matched}

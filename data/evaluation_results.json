@@ -1,0 +1,1631 @@
+[
+  {
+    "resume": "resume_01_python_dev.txt",
+    "jd": "Python Developer",
+    "score": 92.07,
+    "precision": 0.8095238095238095,
+    "recall": 0.8947368421052632,
+    "f1": 0.8500000000000001,
+    "matched": [
+      "Docker",
+      "REST API",
+      "SQL",
+      "Python",
+      "AWS",
+      "Git",
+      "Django"
+    ],
+    "missing": [],
+    "extra": [
+      "Linux",
+      "MongoDB",
+      "C++",
+      "FastAPI",
+      "React",
+      "Flask",
+      "JavaScript",
+      "GitHub",
+      "PostgreSQL",
+      "scikit-learn",
+      "Data Analysis",
+      "Pandas",
+      "NumPy",
+      "Machine Learning"
+    ]
+  },
+  {
+    "resume": "resume_01_python_dev.txt",
+    "jd": "Data Analyst",
+    "score": 75.09,
+    "precision": 0.7391304347826086,
+    "recall": 0.8947368421052632,
+    "f1": 0.8095238095238095,
+    "matched": [
+      "SQL",
+      "AWS",
+      "Data Analysis",
+      "Pandas",
+      "Python"
+    ],
+    "missing": [
+      "Power BI",
+      "Data Visualization"
+    ],
+    "extra": [
+      "Linux",
+      "Docker",
+      "C++",
+      "FastAPI",
+      "REST API",
+      "React",
+      "Flask",
+      "JavaScript",
+      "GitHub",
+      "PostgreSQL",
+      "Git",
+      "scikit-learn",
+      "MongoDB",
+      "NumPy",
+      "Machine Learning",
+      "Django"
+    ]
+  },
+  {
+    "resume": "resume_01_python_dev.txt",
+    "jd": "Web Developer",
+    "score": 49.45,
+    "precision": 0.7083333333333334,
+    "recall": 0.8947368421052632,
+    "f1": 0.7906976744186046,
+    "matched": [
+      "React",
+      "JavaScript",
+      "Git",
+      "REST API"
+    ],
+    "missing": [
+      "CSS",
+      "Node.js",
+      "HTML"
+    ],
+    "extra": [
+      "Linux",
+      "MongoDB",
+      "Docker",
+      "C++",
+      "FastAPI",
+      "SQL",
+      "Python",
+      "Flask",
+      "GitHub",
+      "AWS",
+      "PostgreSQL",
+      "scikit-learn",
+      "Data Analysis",
+      "Pandas",
+      "NumPy",
+      "Machine Learning",
+      "Django"
+    ]
+  },
+  {
+    "resume": "resume_02_data_analyst.txt",
+    "jd": "Python Developer",
+    "score": 52.77,
+    "precision": 0.5,
+    "recall": 0.5294117647058824,
+    "f1": 0.5142857142857143,
+    "matched": [
+      "REST API",
+      "SQL",
+      "Python"
+    ],
+    "missing": [
+      "Docker",
+      "AWS",
+      "Git",
+      "Django"
+    ],
+    "extra": [
+      "Matplotlib",
+      "TensorFlow",
+      "FastAPI",
+      "Pandas",
+      "GitHub",
+      "Machine Learning",
+      "Power BI",
+      "Data Analysis",
+      "PyTorch",
+      "NumPy",
+      "scikit-learn"
+    ]
+  },
+  {
+    "resume": "resume_02_data_analyst.txt",
+    "jd": "Data Analyst",
+    "score": 79.38,
+    "precision": 0.5625,
+    "recall": 0.5294117647058824,
+    "f1": 0.5454545454545455,
+    "matched": [
+      "SQL",
+      "Power BI",
+      "Data Analysis",
+      "Pandas",
+      "Python"
+    ],
+    "missing": [
+      "Data Visualization",
+      "AWS"
+    ],
+    "extra": [
+      "Matplotlib",
+      "TensorFlow",
+      "FastAPI",
+      "GitHub",
+      "scikit-learn",
+      "PyTorch",
+      "NumPy",
+      "Machine Learning",
+      "REST API"
+    ]
+  },
+  {
+    "resume": "resume_02_data_analyst.txt",
+    "jd": "Web Developer",
+    "score": 8.38,
+    "precision": 0.45,
+    "recall": 0.5294117647058824,
+    "f1": 0.48648648648648646,
+    "matched": [
+      "REST API"
+    ],
+    "missing": [
+      "React",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "Git",
+      "HTML"
+    ],
+    "extra": [
+      "Matplotlib",
+      "TensorFlow",
+      "FastAPI",
+      "SQL",
+      "Pandas",
+      "GitHub",
+      "scikit-learn",
+      "Power BI",
+      "Data Analysis",
+      "PyTorch",
+      "NumPy",
+      "Machine Learning",
+      "Python"
+    ]
+  },
+  {
+    "resume": "resume_03_web_dev.txt",
+    "jd": "Python Developer",
+    "score": 20.39,
+    "precision": 0.6470588235294118,
+    "recall": 0.44,
+    "f1": 0.5238095238095238,
+    "matched": [
+      "Docker",
+      "AWS"
+    ],
+    "missing": [
+      "REST API",
+      "SQL",
+      "Python",
+      "Git",
+      "Django"
+    ],
+    "extra": [
+      "MySQL",
+      "React",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "GitHub",
+      "PostgreSQL",
+      "MongoDB",
+      "TypeScript",
+      "HTML"
+    ]
+  },
+  {
+    "resume": "resume_03_web_dev.txt",
+    "jd": "Data Analyst",
+    "score": 10.05,
+    "precision": 0.6111111111111112,
+    "recall": 0.44,
+    "f1": 0.5116279069767442,
+    "matched": [
+      "AWS"
+    ],
+    "missing": [
+      "SQL",
+      "Data Visualization",
+      "Power BI",
+      "Data Analysis",
+      "Pandas",
+      "Python"
+    ],
+    "extra": [
+      "Docker",
+      "MySQL",
+      "React",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "GitHub",
+      "PostgreSQL",
+      "MongoDB",
+      "TypeScript",
+      "HTML"
+    ]
+  },
+  {
+    "resume": "resume_03_web_dev.txt",
+    "jd": "Web Developer",
+    "score": 80.28,
+    "precision": 0.7857142857142857,
+    "recall": 0.44,
+    "f1": 0.5641025641025641,
+    "matched": [
+      "React",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "HTML"
+    ],
+    "missing": [
+      "Git",
+      "REST API"
+    ],
+    "extra": [
+      "Docker",
+      "MySQL",
+      "GitHub",
+      "AWS",
+      "PostgreSQL",
+      "MongoDB",
+      "TypeScript"
+    ]
+  },
+  {
+    "resume": "resume_04_fullstack.txt",
+    "jd": "Python Developer",
+    "score": 47.48,
+    "precision": 0.6666666666666666,
+    "recall": 0.5263157894736842,
+    "f1": 0.5882352941176471,
+    "matched": [
+      "Docker",
+      "Django",
+      "AWS",
+      "Python"
+    ],
+    "missing": [
+      "Git",
+      "SQL",
+      "REST API"
+    ],
+    "extra": [
+      "C++",
+      "Kubernetes",
+      "MySQL",
+      "React",
+      "Java",
+      "JavaScript",
+      "GitHub",
+      "PostgreSQL"
+    ]
+  },
+  {
+    "resume": "resume_04_fullstack.txt",
+    "jd": "Data Analyst",
+    "score": 26.4,
+    "precision": 0.5882352941176471,
+    "recall": 0.5263157894736842,
+    "f1": 0.5555555555555555,
+    "matched": [
+      "AWS",
+      "Python"
+    ],
+    "missing": [
+      "SQL",
+      "Data Visualization",
+      "Power BI",
+      "Data Analysis",
+      "Pandas"
+    ],
+    "extra": [
+      "Docker",
+      "C++",
+      "Kubernetes",
+      "MySQL",
+      "React",
+      "Java",
+      "JavaScript",
+      "GitHub",
+      "PostgreSQL",
+      "Django"
+    ]
+  },
+  {
+    "resume": "resume_04_fullstack.txt",
+    "jd": "Web Developer",
+    "score": 37.36,
+    "precision": 0.5882352941176471,
+    "recall": 0.5263157894736842,
+    "f1": 0.5555555555555555,
+    "matched": [
+      "React",
+      "JavaScript"
+    ],
+    "missing": [
+      "CSS",
+      "Node.js",
+      "Git",
+      "HTML",
+      "REST API"
+    ],
+    "extra": [
+      "Docker",
+      "C++",
+      "Kubernetes",
+      "MySQL",
+      "Python",
+      "Java",
+      "GitHub",
+      "AWS",
+      "PostgreSQL",
+      "Django"
+    ]
+  },
+  {
+    "resume": "resume_05_weak.txt",
+    "jd": "Python Developer",
+    "score": 39.57,
+    "precision": 0.5,
+    "recall": 0.8333333333333334,
+    "f1": 0.625,
+    "matched": [
+      "Git",
+      "Python"
+    ],
+    "missing": [
+      "Docker",
+      "SQL",
+      "REST API",
+      "AWS",
+      "Django"
+    ],
+    "extra": [
+      "CSS",
+      "HTML",
+      "MySQL"
+    ]
+  },
+  {
+    "resume": "resume_05_weak.txt",
+    "jd": "Data Analyst",
+    "score": 20.59,
+    "precision": 0.45454545454545453,
+    "recall": 0.8333333333333334,
+    "f1": 0.5882352941176471,
+    "matched": [
+      "Python"
+    ],
+    "missing": [
+      "SQL",
+      "Data Visualization",
+      "AWS",
+      "Power BI",
+      "Data Analysis",
+      "Pandas"
+    ],
+    "extra": [
+      "CSS",
+      "HTML",
+      "MySQL",
+      "Git"
+    ]
+  },
+  {
+    "resume": "resume_05_weak.txt",
+    "jd": "Web Developer",
+    "score": 46.65,
+    "precision": 0.5555555555555556,
+    "recall": 0.8333333333333334,
+    "f1": 0.6666666666666667,
+    "matched": [
+      "CSS",
+      "HTML",
+      "Git"
+    ],
+    "missing": [
+      "React",
+      "JavaScript",
+      "Node.js",
+      "REST API"
+    ],
+    "extra": [
+      "MySQL",
+      "Python"
+    ]
+  },
+  {
+    "resume": "resume_06_devops.txt",
+    "jd": "Python Developer",
+    "score": 41.42,
+    "precision": 0.5,
+    "recall": 0.20833333333333334,
+    "f1": 0.29411764705882354,
+    "matched": [
+      "Docker",
+      "AWS",
+      "Python"
+    ],
+    "missing": [
+      "Django",
+      "Git",
+      "SQL",
+      "REST API"
+    ],
+    "extra": [
+      "Linux",
+      "GitHub",
+      "Kubernetes"
+    ]
+  },
+  {
+    "resume": "resume_06_devops.txt",
+    "jd": "Data Analyst",
+    "score": 26.77,
+    "precision": 0.45454545454545453,
+    "recall": 0.20833333333333334,
+    "f1": 0.28571428571428575,
+    "matched": [
+      "AWS",
+      "Python"
+    ],
+    "missing": [
+      "SQL",
+      "Data Visualization",
+      "Power BI",
+      "Data Analysis",
+      "Pandas"
+    ],
+    "extra": [
+      "Linux",
+      "Docker",
+      "GitHub",
+      "Kubernetes"
+    ]
+  },
+  {
+    "resume": "resume_06_devops.txt",
+    "jd": "Web Developer",
+    "score": 5.53,
+    "precision": 0.38461538461538464,
+    "recall": 0.20833333333333334,
+    "f1": 0.2702702702702703,
+    "matched": [],
+    "missing": [
+      "React",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "Git",
+      "HTML",
+      "REST API"
+    ],
+    "extra": [
+      "Linux",
+      "Docker",
+      "Kubernetes",
+      "GitHub",
+      "AWS",
+      "Python"
+    ]
+  },
+  {
+    "resume": "resume_07_mobile.txt",
+    "jd": "Python Developer",
+    "score": 2.73,
+    "precision": 0.08333333333333333,
+    "recall": 0.0625,
+    "f1": 0.07142857142857144,
+    "matched": [],
+    "missing": [
+      "Docker",
+      "REST API",
+      "SQL",
+      "Python",
+      "AWS",
+      "Git",
+      "Django"
+    ],
+    "extra": [
+      "React",
+      "JavaScript",
+      "Node.js",
+      "GitHub",
+      "TypeScript"
+    ]
+  },
+  {
+    "resume": "resume_07_mobile.txt",
+    "jd": "Data Analyst",
+    "score": 0.42,
+    "precision": 0.08333333333333333,
+    "recall": 0.0625,
+    "f1": 0.07142857142857144,
+    "matched": [],
+    "missing": [
+      "SQL",
+      "Data Visualization",
+      "AWS",
+      "Power BI",
+      "Data Analysis",
+      "Pandas",
+      "Python"
+    ],
+    "extra": [
+      "React",
+      "JavaScript",
+      "Node.js",
+      "GitHub",
+      "TypeScript"
+    ]
+  },
+  {
+    "resume": "resume_07_mobile.txt",
+    "jd": "Web Developer",
+    "score": 50.23,
+    "precision": 0.1111111111111111,
+    "recall": 0.0625,
+    "f1": 0.08,
+    "matched": [
+      "React",
+      "JavaScript",
+      "Node.js"
+    ],
+    "missing": [
+      "Git",
+      "CSS",
+      "HTML",
+      "REST API"
+    ],
+    "extra": [
+      "TypeScript",
+      "GitHub"
+    ]
+  },
+  {
+    "resume": "resume_08_qa.txt",
+    "jd": "Python Developer",
+    "score": 20.93,
+    "precision": 0.36363636363636365,
+    "recall": 0.16,
+    "f1": 0.2222222222222222,
+    "matched": [
+      "Python"
+    ],
+    "missing": [
+      "Docker",
+      "SQL",
+      "REST API",
+      "AWS",
+      "Git",
+      "Django"
+    ],
+    "extra": [
+      "Java",
+      "TypeScript",
+      "JavaScript",
+      "GitHub"
+    ]
+  },
+  {
+    "resume": "resume_08_qa.txt",
+    "jd": "Data Analyst",
+    "score": 17.61,
+    "precision": 0.36363636363636365,
+    "recall": 0.16,
+    "f1": 0.2222222222222222,
+    "matched": [
+      "Python"
+    ],
+    "missing": [
+      "SQL",
+      "Data Visualization",
+      "AWS",
+      "Power BI",
+      "Data Analysis",
+      "Pandas"
+    ],
+    "extra": [
+      "Java",
+      "TypeScript",
+      "JavaScript",
+      "GitHub"
+    ]
+  },
+  {
+    "resume": "resume_08_qa.txt",
+    "jd": "Web Developer",
+    "score": 24.34,
+    "precision": 0.36363636363636365,
+    "recall": 0.16,
+    "f1": 0.2222222222222222,
+    "matched": [
+      "JavaScript"
+    ],
+    "missing": [
+      "React",
+      "CSS",
+      "Node.js",
+      "Git",
+      "HTML",
+      "REST API"
+    ],
+    "extra": [
+      "Java",
+      "TypeScript",
+      "GitHub",
+      "Python"
+    ]
+  },
+  {
+    "resume": "resume_09_backend.txt",
+    "jd": "Python Developer",
+    "score": 40.34,
+    "precision": 0.5833333333333334,
+    "recall": 0.28,
+    "f1": 0.3783783783783784,
+    "matched": [
+      "Docker",
+      "AWS",
+      "Python"
+    ],
+    "missing": [
+      "Django",
+      "Git",
+      "SQL",
+      "REST API"
+    ],
+    "extra": [
+      "Kubernetes",
+      "FastAPI",
+      "Java",
+      "GitHub",
+      "PostgreSQL"
+    ]
+  },
+  {
+    "resume": "resume_09_backend.txt",
+    "jd": "Data Analyst",
+    "score": 27.26,
+    "precision": 0.5384615384615384,
+    "recall": 0.28,
+    "f1": 0.3684210526315789,
+    "matched": [
+      "AWS",
+      "Python"
+    ],
+    "missing": [
+      "SQL",
+      "Data Visualization",
+      "Power BI",
+      "Data Analysis",
+      "Pandas"
+    ],
+    "extra": [
+      "Docker",
+      "Kubernetes",
+      "FastAPI",
+      "Java",
+      "GitHub",
+      "PostgreSQL"
+    ]
+  },
+  {
+    "resume": "resume_09_backend.txt",
+    "jd": "Web Developer",
+    "score": 4.11,
+    "precision": 0.4666666666666667,
+    "recall": 0.28,
+    "f1": 0.35000000000000003,
+    "matched": [],
+    "missing": [
+      "React",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "Git",
+      "HTML",
+      "REST API"
+    ],
+    "extra": [
+      "Docker",
+      "Kubernetes",
+      "FastAPI",
+      "Java",
+      "GitHub",
+      "AWS",
+      "PostgreSQL",
+      "Python"
+    ]
+  },
+  {
+    "resume": "resume_10_data_eng.txt",
+    "jd": "Python Developer",
+    "score": 48.92,
+    "precision": 0.3333333333333333,
+    "recall": 0.1111111111111111,
+    "f1": 0.16666666666666666,
+    "matched": [
+      "AWS",
+      "SQL",
+      "Python"
+    ],
+    "missing": [
+      "Docker",
+      "Django",
+      "Git",
+      "REST API"
+    ],
+    "extra": [
+      "GitHub",
+      "Machine Learning"
+    ]
+  },
+  {
+    "resume": "resume_10_data_eng.txt",
+    "jd": "Data Analyst",
+    "score": 47.21,
+    "precision": 0.3333333333333333,
+    "recall": 0.1111111111111111,
+    "f1": 0.16666666666666666,
+    "matched": [
+      "AWS",
+      "SQL",
+      "Python"
+    ],
+    "missing": [
+      "Power BI",
+      "Data Analysis",
+      "Pandas",
+      "Data Visualization"
+    ],
+    "extra": [
+      "GitHub",
+      "Machine Learning"
+    ]
+  },
+  {
+    "resume": "resume_10_data_eng.txt",
+    "jd": "Web Developer",
+    "score": 2.57,
+    "precision": 0.25,
+    "recall": 0.1111111111111111,
+    "f1": 0.15384615384615383,
+    "matched": [],
+    "missing": [
+      "React",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "Git",
+      "HTML",
+      "REST API"
+    ],
+    "extra": [
+      "SQL",
+      "GitHub",
+      "AWS",
+      "Machine Learning",
+      "Python"
+    ]
+  },
+  {
+    "resume": "resume_11_ml_eng.txt",
+    "jd": "Python Developer",
+    "score": 27.17,
+    "precision": 0.25,
+    "recall": 0.13793103448275862,
+    "f1": 0.17777777777777778,
+    "matched": [
+      "AWS",
+      "Python"
+    ],
+    "missing": [
+      "Docker",
+      "SQL",
+      "REST API",
+      "Git",
+      "Django"
+    ],
+    "extra": [
+      "TensorFlow",
+      "Kubernetes",
+      "FastAPI",
+      "Pandas",
+      "Natural Language Processing",
+      "GitHub",
+      "Microsoft Azure",
+      "PyTorch",
+      "Machine Learning"
+    ]
+  },
+  {
+    "resume": "resume_11_ml_eng.txt",
+    "jd": "Data Analyst",
+    "score": 42.4,
+    "precision": 0.26666666666666666,
+    "recall": 0.13793103448275862,
+    "f1": 0.18181818181818182,
+    "matched": [
+      "AWS",
+      "Pandas",
+      "Python"
+    ],
+    "missing": [
+      "Power BI",
+      "Data Analysis",
+      "Data Visualization",
+      "SQL"
+    ],
+    "extra": [
+      "TensorFlow",
+      "Kubernetes",
+      "FastAPI",
+      "Natural Language Processing",
+      "GitHub",
+      "Microsoft Azure",
+      "PyTorch",
+      "Machine Learning"
+    ]
+  },
+  {
+    "resume": "resume_11_ml_eng.txt",
+    "jd": "Web Developer",
+    "score": 0.7,
+    "precision": 0.2222222222222222,
+    "recall": 0.13793103448275862,
+    "f1": 0.1702127659574468,
+    "matched": [],
+    "missing": [
+      "React",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "Git",
+      "HTML",
+      "REST API"
+    ],
+    "extra": [
+      "TensorFlow",
+      "Kubernetes",
+      "FastAPI",
+      "Pandas",
+      "Natural Language Processing",
+      "GitHub",
+      "AWS",
+      "Microsoft Azure",
+      "PyTorch",
+      "Machine Learning",
+      "Python"
+    ]
+  },
+  {
+    "resume": "resume_12_frontend.txt",
+    "jd": "Python Developer",
+    "score": 28.24,
+    "precision": 0.35714285714285715,
+    "recall": 0.21739130434782608,
+    "f1": 0.27027027027027023,
+    "matched": [
+      "Docker",
+      "Git"
+    ],
+    "missing": [
+      "REST API",
+      "SQL",
+      "Python",
+      "AWS",
+      "Django"
+    ],
+    "extra": [
+      "React",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "GitHub",
+      "PostgreSQL",
+      "TypeScript"
+    ]
+  },
+  {
+    "resume": "resume_12_frontend.txt",
+    "jd": "Data Analyst",
+    "score": 1.99,
+    "precision": 0.3125,
+    "recall": 0.21739130434782608,
+    "f1": 0.2564102564102564,
+    "matched": [],
+    "missing": [
+      "SQL",
+      "Data Visualization",
+      "AWS",
+      "Power BI",
+      "Data Analysis",
+      "Pandas",
+      "Python"
+    ],
+    "extra": [
+      "Docker",
+      "React",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "GitHub",
+      "PostgreSQL",
+      "Git",
+      "TypeScript"
+    ]
+  },
+  {
+    "resume": "resume_12_frontend.txt",
+    "jd": "Web Developer",
+    "score": 73.73,
+    "precision": 0.45454545454545453,
+    "recall": 0.21739130434782608,
+    "f1": 0.29411764705882354,
+    "matched": [
+      "React",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "Git"
+    ],
+    "missing": [
+      "HTML",
+      "REST API"
+    ],
+    "extra": [
+      "Docker",
+      "TypeScript",
+      "GitHub",
+      "PostgreSQL"
+    ]
+  },
+  {
+    "resume": "resume_13_security.txt",
+    "jd": "Python Developer",
+    "score": 34.04,
+    "precision": 0.1,
+    "recall": 0.037037037037037035,
+    "f1": 0.05405405405405406,
+    "matched": [
+      "AWS",
+      "Python"
+    ],
+    "missing": [
+      "Docker",
+      "SQL",
+      "REST API",
+      "Git",
+      "Django"
+    ],
+    "extra": [
+      "React",
+      "GitHub",
+      "PostgreSQL"
+    ]
+  },
+  {
+    "resume": "resume_13_security.txt",
+    "jd": "Data Analyst",
+    "score": 29.25,
+    "precision": 0.1,
+    "recall": 0.037037037037037035,
+    "f1": 0.05405405405405406,
+    "matched": [
+      "AWS",
+      "Python"
+    ],
+    "missing": [
+      "SQL",
+      "Data Visualization",
+      "Power BI",
+      "Data Analysis",
+      "Pandas"
+    ],
+    "extra": [
+      "React",
+      "GitHub",
+      "PostgreSQL"
+    ]
+  },
+  {
+    "resume": "resume_13_security.txt",
+    "jd": "Web Developer",
+    "score": 23.68,
+    "precision": 0.09090909090909091,
+    "recall": 0.037037037037037035,
+    "f1": 0.05263157894736842,
+    "matched": [
+      "React"
+    ],
+    "missing": [
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "Git",
+      "HTML",
+      "REST API"
+    ],
+    "extra": [
+      "GitHub",
+      "AWS",
+      "PostgreSQL",
+      "Python"
+    ]
+  },
+  {
+    "resume": "resume_14_blockchain.txt",
+    "jd": "Python Developer",
+    "score": 12.2,
+    "precision": 0.3333333333333333,
+    "recall": 0.12903225806451613,
+    "f1": 0.18604651162790697,
+    "matched": [
+      "Docker"
+    ],
+    "missing": [
+      "REST API",
+      "SQL",
+      "Python",
+      "AWS",
+      "Git",
+      "Django"
+    ],
+    "extra": [
+      "Kubernetes",
+      "React",
+      "JavaScript",
+      "GitHub",
+      "TypeScript"
+    ]
+  },
+  {
+    "resume": "resume_14_blockchain.txt",
+    "jd": "Data Analyst",
+    "score": 0.0,
+    "precision": 0.3076923076923077,
+    "recall": 0.12903225806451613,
+    "f1": 0.18181818181818182,
+    "matched": [],
+    "missing": [
+      "SQL",
+      "Data Visualization",
+      "AWS",
+      "Power BI",
+      "Data Analysis",
+      "Pandas",
+      "Python"
+    ],
+    "extra": [
+      "Docker",
+      "Kubernetes",
+      "React",
+      "JavaScript",
+      "GitHub",
+      "TypeScript"
+    ]
+  },
+  {
+    "resume": "resume_14_blockchain.txt",
+    "jd": "Web Developer",
+    "score": 40.94,
+    "precision": 0.36363636363636365,
+    "recall": 0.12903225806451613,
+    "f1": 0.19047619047619047,
+    "matched": [
+      "React",
+      "JavaScript"
+    ],
+    "missing": [
+      "CSS",
+      "Node.js",
+      "Git",
+      "HTML",
+      "REST API"
+    ],
+    "extra": [
+      "Docker",
+      "TypeScript",
+      "GitHub",
+      "Kubernetes"
+    ]
+  },
+  {
+    "resume": "resume_15_gamedev.txt",
+    "jd": "Python Developer",
+    "score": 16.83,
+    "precision": 0.2727272727272727,
+    "recall": 0.13043478260869565,
+    "f1": 0.1764705882352941,
+    "matched": [
+      "Git"
+    ],
+    "missing": [
+      "Docker",
+      "REST API",
+      "SQL",
+      "Python",
+      "AWS",
+      "Django"
+    ],
+    "extra": [
+      "Linux",
+      "GitHub",
+      "C++",
+      "C#"
+    ]
+  },
+  {
+    "resume": "resume_15_gamedev.txt",
+    "jd": "Data Analyst",
+    "score": 0.0,
+    "precision": 0.25,
+    "recall": 0.13043478260869565,
+    "f1": 0.1714285714285714,
+    "matched": [],
+    "missing": [
+      "SQL",
+      "Data Visualization",
+      "AWS",
+      "Power BI",
+      "Data Analysis",
+      "Pandas",
+      "Python"
+    ],
+    "extra": [
+      "Linux",
+      "C++",
+      "GitHub",
+      "Git",
+      "C#"
+    ]
+  },
+  {
+    "resume": "resume_15_gamedev.txt",
+    "jd": "Web Developer",
+    "score": 13.68,
+    "precision": 0.2727272727272727,
+    "recall": 0.13043478260869565,
+    "f1": 0.1764705882352941,
+    "matched": [
+      "Git"
+    ],
+    "missing": [
+      "React",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "HTML",
+      "REST API"
+    ],
+    "extra": [
+      "Linux",
+      "GitHub",
+      "C++",
+      "C#"
+    ]
+  },
+  {
+    "resume": "resume_16_embedded.txt",
+    "jd": "Python Developer",
+    "score": 2.69,
+    "precision": 0.07142857142857142,
+    "recall": 0.03225806451612903,
+    "f1": 0.044444444444444446,
+    "matched": [],
+    "missing": [
+      "Docker",
+      "REST API",
+      "SQL",
+      "Python",
+      "AWS",
+      "Git",
+      "Django"
+    ],
+    "extra": [
+      "Linux",
+      "TensorFlow",
+      "C++",
+      "Node.js",
+      "Communication",
+      "GitHub",
+      "Machine Learning"
+    ]
+  },
+  {
+    "resume": "resume_16_embedded.txt",
+    "jd": "Data Analyst",
+    "score": 0.54,
+    "precision": 0.07142857142857142,
+    "recall": 0.03225806451612903,
+    "f1": 0.044444444444444446,
+    "matched": [],
+    "missing": [
+      "SQL",
+      "Data Visualization",
+      "AWS",
+      "Power BI",
+      "Data Analysis",
+      "Pandas",
+      "Python"
+    ],
+    "extra": [
+      "Linux",
+      "TensorFlow",
+      "C++",
+      "Node.js",
+      "Communication",
+      "GitHub",
+      "Machine Learning"
+    ]
+  },
+  {
+    "resume": "resume_16_embedded.txt",
+    "jd": "Web Developer",
+    "score": 12.06,
+    "precision": 0.07692307692307693,
+    "recall": 0.03225806451612903,
+    "f1": 0.045454545454545456,
+    "matched": [
+      "Node.js"
+    ],
+    "missing": [
+      "React",
+      "CSS",
+      "JavaScript",
+      "Git",
+      "HTML",
+      "REST API"
+    ],
+    "extra": [
+      "Linux",
+      "TensorFlow",
+      "C++",
+      "Communication",
+      "GitHub",
+      "Machine Learning"
+    ]
+  },
+  {
+    "resume": "resume_17_platform.txt",
+    "jd": "Python Developer",
+    "score": 21.84,
+    "precision": 0.3,
+    "recall": 0.1111111111111111,
+    "f1": 0.16216216216216217,
+    "matched": [
+      "Python"
+    ],
+    "missing": [
+      "Docker",
+      "SQL",
+      "REST API",
+      "AWS",
+      "Git",
+      "Django"
+    ],
+    "extra": [
+      "TypeScript",
+      "GitHub",
+      "Kubernetes"
+    ]
+  },
+  {
+    "resume": "resume_17_platform.txt",
+    "jd": "Data Analyst",
+    "score": 17.48,
+    "precision": 0.3,
+    "recall": 0.1111111111111111,
+    "f1": 0.16216216216216217,
+    "matched": [
+      "Python"
+    ],
+    "missing": [
+      "SQL",
+      "Data Visualization",
+      "AWS",
+      "Power BI",
+      "Data Analysis",
+      "Pandas"
+    ],
+    "extra": [
+      "TypeScript",
+      "GitHub",
+      "Kubernetes"
+    ]
+  },
+  {
+    "resume": "resume_17_platform.txt",
+    "jd": "Web Developer",
+    "score": 6.44,
+    "precision": 0.2727272727272727,
+    "recall": 0.1111111111111111,
+    "f1": 0.15789473684210525,
+    "matched": [],
+    "missing": [
+      "React",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "Git",
+      "HTML",
+      "REST API"
+    ],
+    "extra": [
+      "Kubernetes",
+      "TypeScript",
+      "GitHub",
+      "Python"
+    ]
+  },
+  {
+    "resume": "resume_18_fullstack2.txt",
+    "jd": "Python Developer",
+    "score": 46.9,
+    "precision": 0.7058823529411765,
+    "recall": 0.42857142857142855,
+    "f1": 0.5333333333333333,
+    "matched": [
+      "Docker",
+      "Django",
+      "AWS",
+      "Python"
+    ],
+    "missing": [
+      "Git",
+      "SQL",
+      "REST API"
+    ],
+    "extra": [
+      "Data Structures",
+      "Kubernetes",
+      "FastAPI",
+      "MySQL",
+      "React",
+      "JavaScript",
+      "GitHub",
+      "PostgreSQL",
+      "MongoDB",
+      "TypeScript"
+    ]
+  },
+  {
+    "resume": "resume_18_fullstack2.txt",
+    "jd": "Data Analyst",
+    "score": 27.59,
+    "precision": 0.631578947368421,
+    "recall": 0.42857142857142855,
+    "f1": 0.5106382978723404,
+    "matched": [
+      "AWS",
+      "Python"
+    ],
+    "missing": [
+      "SQL",
+      "Data Visualization",
+      "Power BI",
+      "Data Analysis",
+      "Pandas"
+    ],
+    "extra": [
+      "Docker",
+      "Data Structures",
+      "Kubernetes",
+      "FastAPI",
+      "MySQL",
+      "React",
+      "JavaScript",
+      "GitHub",
+      "PostgreSQL",
+      "MongoDB",
+      "TypeScript",
+      "Django"
+    ]
+  },
+  {
+    "resume": "resume_18_fullstack2.txt",
+    "jd": "Web Developer",
+    "score": 37.34,
+    "precision": 0.631578947368421,
+    "recall": 0.42857142857142855,
+    "f1": 0.5106382978723404,
+    "matched": [
+      "React",
+      "JavaScript"
+    ],
+    "missing": [
+      "CSS",
+      "Node.js",
+      "Git",
+      "HTML",
+      "REST API"
+    ],
+    "extra": [
+      "Docker",
+      "Data Structures",
+      "Kubernetes",
+      "FastAPI",
+      "MySQL",
+      "Python",
+      "GitHub",
+      "AWS",
+      "PostgreSQL",
+      "MongoDB",
+      "TypeScript",
+      "Django"
+    ]
+  },
+  {
+    "resume": "resume_19_growth.txt",
+    "jd": "Python Developer",
+    "score": 36.6,
+    "precision": 0.3333333333333333,
+    "recall": 0.18181818181818182,
+    "f1": 0.23529411764705885,
+    "matched": [
+      "SQL",
+      "Python"
+    ],
+    "missing": [
+      "Docker",
+      "REST API",
+      "AWS",
+      "Git",
+      "Django"
+    ],
+    "extra": [
+      "Communication",
+      "GitHub",
+      "Machine Learning",
+      "Power BI",
+      "scikit-learn"
+    ]
+  },
+  {
+    "resume": "resume_19_growth.txt",
+    "jd": "Data Analyst",
+    "score": 47.66,
+    "precision": 0.36363636363636365,
+    "recall": 0.18181818181818182,
+    "f1": 0.24242424242424246,
+    "matched": [
+      "Power BI",
+      "SQL",
+      "Python"
+    ],
+    "missing": [
+      "Data Analysis",
+      "Pandas",
+      "Data Visualization",
+      "AWS"
+    ],
+    "extra": [
+      "scikit-learn",
+      "Communication",
+      "GitHub",
+      "Machine Learning"
+    ]
+  },
+  {
+    "resume": "resume_19_growth.txt",
+    "jd": "Web Developer",
+    "score": 2.07,
+    "precision": 0.2857142857142857,
+    "recall": 0.18181818181818182,
+    "f1": 0.2222222222222222,
+    "matched": [],
+    "missing": [
+      "React",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "Git",
+      "HTML",
+      "REST API"
+    ],
+    "extra": [
+      "SQL",
+      "Communication",
+      "GitHub",
+      "Machine Learning",
+      "Power BI",
+      "scikit-learn",
+      "Python"
+    ]
+  },
+  {
+    "resume": "resume_20_sre.txt",
+    "jd": "Python Developer",
+    "score": 33.7,
+    "precision": 0.1111111111111111,
+    "recall": 0.041666666666666664,
+    "f1": 0.06060606060606061,
+    "matched": [
+      "AWS",
+      "Python"
+    ],
+    "missing": [
+      "Docker",
+      "SQL",
+      "REST API",
+      "Git",
+      "Django"
+    ],
+    "extra": [
+      "GitHub",
+      "Kubernetes"
+    ]
+  },
+  {
+    "resume": "resume_20_sre.txt",
+    "jd": "Data Analyst",
+    "score": 27.42,
+    "precision": 0.1111111111111111,
+    "recall": 0.041666666666666664,
+    "f1": 0.06060606060606061,
+    "matched": [
+      "AWS",
+      "Python"
+    ],
+    "missing": [
+      "SQL",
+      "Data Visualization",
+      "Power BI",
+      "Data Analysis",
+      "Pandas"
+    ],
+    "extra": [
+      "GitHub",
+      "Kubernetes"
+    ]
+  },
+  {
+    "resume": "resume_20_sre.txt",
+    "jd": "Web Developer",
+    "score": 5.36,
+    "precision": 0.09090909090909091,
+    "recall": 0.041666666666666664,
+    "f1": 0.05714285714285715,
+    "matched": [],
+    "missing": [
+      "React",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "Git",
+      "HTML",
+      "REST API"
+    ],
+    "extra": [
+      "GitHub",
+      "Kubernetes",
+      "AWS",
+      "Python"
+    ]
+  }
+]

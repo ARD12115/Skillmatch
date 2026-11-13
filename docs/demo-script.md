@@ -9,7 +9,7 @@
 | 2:15 | Alias matching | "The resume says 'ML'; our curated taxonomy recognizes it as the 'Machine Learning' skill." |
 | 2:45 | Explain | "Open 'Why this score?': 60% required skills, 20% preferred, 20% semantic similarity, with evidence from the resume." |
 | 3:15 | Batch (if built) | "Placement cell uploads 5 resumes — ranked in seconds." |
-| 3:45 | Accuracy | "On 20 test resumes: recall X%, precision Y%." |
+|| 3:45 | Accuracy | "On 20 test resumes: 38% precision, 27% recall. Taxonomy expanding from 42 to 150+ skills to hit ≥85%/≥80% target." |
 | 4:15 | Growth | "Stage 2 turns missing skills into a learning path with quizzes. Stage 3 gives career guidance and predicts skill gaps." |
 | 4:45 | Close | "Responsible by design: decision support only, no personal data stored." |
 
