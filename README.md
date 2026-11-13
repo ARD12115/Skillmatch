@@ -35,4 +35,4 @@ embedding model is unavailable, text similarity falls back to local TF-IDF.
 See `docs/` — start with `prd.md`, then `trd.md`. Claude Code config is in `.claude/`.
 
 ## Team
-<Team name> — <leader>, <members> · Mentor: <faculty guide>
+Solution Seeker's — Abhinav, Dhanush Pai, Damodar Hegde · Mentor: Ms. Saritha Suvarna
