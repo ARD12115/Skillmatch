@@ -1,10 +1,20 @@
 #!/usr/bin/env bash
 set -euo pipefail
-python3 -m venv .venv
-source .venv/bin/activate
-pip install --upgrade pip
-pip install -r requirements.txt
-cp -n .env.example .env || true
+
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+ROOT_DIR="$(cd -- "$SCRIPT_DIR/.." && pwd)"
+VENV_DIR="$ROOT_DIR/.venv"
+
+cd "$ROOT_DIR"
+export PYTHONPATH="$ROOT_DIR${PYTHONPATH:+:$PYTHONPATH}"
+
+python3 -m venv "$VENV_DIR"
+# shellcheck disable=SC1090
+source "$VENV_DIR/bin/activate"
+python -m pip install --upgrade pip
+python -m pip install -r "$ROOT_DIR/requirements.txt"
+cp -n "$ROOT_DIR/.env.example" "$ROOT_DIR/.env" || true
+
 # Pre-download the embedding model now (needs internet once), so the demo works offline.
 python - <<'PY'
 try:
@@ -18,4 +28,5 @@ except Exception as exc:
         f"({type(exc).__name__}); the app will use TF-IDF fallback."
     )
 PY
-echo "Setup done. Run: bash scripts/run.sh"
+
+echo "Setup done. Run from the repo root: bash scripts/run.sh"
