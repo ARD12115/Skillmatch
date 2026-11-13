@@ -1,0 +1,9 @@
+streamlit
+pdfplumber
+python-docx
+rapidfuzz
+sentence-transformers
+scikit-learn
+pandas
+pytest
+ruff

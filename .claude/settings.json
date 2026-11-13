@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pytest:*)",
+      "Bash(ruff:*)",
+      "Bash(streamlit run:*)",
+      "Bash(python -m pytest:*)",
+      "Bash(git status)",
+      "Bash(git diff:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./data/samples/**)",
+      "Bash(rm -rf:*)",
+      "Bash(curl:*)",
+      "Bash(wget:*)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          { "type": "command", "command": "ruff check src tests --fix --quiet || true" }
+        ]
+      }
+    ]
+  }
+}
