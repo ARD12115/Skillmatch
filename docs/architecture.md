@@ -31,7 +31,6 @@ import `ui`.
 ## Folder layout
 ```
 skillmatch/
-├── CLAUDE.md
 ├── README.md
 ├── .claude/ (settings.json, commands/, skills/, agents/)
 ├── docs/

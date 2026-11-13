@@ -27,20 +27,23 @@ JD text/preset -> same path
 ```python
 @dataclass(frozen=True)
 class Skill:
-    name: str          # canonical, e.g. "Machine Learning"
-    category: str      # e.g. "AI/ML", "Web", "Databases"
+    name: str  # canonical, e.g. "Machine Learning"
+    category: str  # e.g. "AI/ML", "Web", "Databases"
+
 
 @dataclass
 class SkillHit:
     skill: Skill
-    evidence: list[str]     # up to 2 short snippets from the source text
+    evidence: list[str]  # up to 2 short snippets from the source text
+
 
 @dataclass
 class ScoreBreakdown:
-    required_coverage: float     # 0-1
-    preferred_coverage: float    # 0-1
-    semantic_similarity: float   # 0-1
-    final_score: float           # 0-100
+    required_coverage: float  # 0-1
+    preferred_coverage: float  # 0-1
+    semantic_similarity: float  # 0-1
+    final_score: float  # 0-100
+
 
 @dataclass
 class MatchResult:
@@ -48,7 +51,7 @@ class MatchResult:
     missing: list[Skill]
     extra: list[Skill]
     breakdown: ScoreBreakdown
-    method: str                  # "embeddings" or "tfidf"
+    method: str  # "embeddings" or "tfidf"
 ```
 
 ## 4. Module interfaces

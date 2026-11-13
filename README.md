@@ -32,7 +32,7 @@ explainable single-resume results, and batch ranking with CSV download. If the
 embedding model is unavailable, text similarity falls back to local TF-IDF.
 
 ## Docs
-See `docs/` — start with `prd.md`, then `trd.md`. Claude Code config is in `.claude/` and `CLAUDE.md`.
+See `docs/` — start with `prd.md`, then `trd.md`. Claude Code config is in `.claude/`.
 
 ## Team
 <Team name> — <leader>, <members> · Mentor: <faculty guide>

@@ -15,7 +15,7 @@ npm i -g @anthropic-ai/claude-code
 cd skillmatch && claude
 ```
 Useful: `/review`, `/test-all`, `/bootstrap parsing/pdf_parser`, `/demo-check`.
-Subagents: `code-reviewer`, `test-writer`, `security-auditor`. Read `CLAUDE.md` first.
+Subagents: `code-reviewer`, `test-writer`, `security-auditor`. Review the project docs before starting.
 
 ## Workflow
 1. Pick a ticket from `docs/tickets.md`.

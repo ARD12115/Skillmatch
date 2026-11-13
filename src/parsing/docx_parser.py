@@ -22,7 +22,9 @@ def extract_text_from_docx(data: bytes) -> str:
                 member.file_size > MAX_DOCX_MEMBER_UNCOMPRESSED_BYTES
                 for member in members
             ):
-                raise ParseError("A DOCX archive member exceeds the safe parsing limit.")
+                raise ParseError(
+                    "A DOCX archive member exceeds the safe parsing limit."
+                )
             if (
                 sum(member.file_size for member in members)
                 > MAX_DOCX_UNCOMPRESSED_BYTES

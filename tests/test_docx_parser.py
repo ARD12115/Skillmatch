@@ -34,7 +34,9 @@ def test_invalid_archive_has_parse_error():
 
 
 def test_rejects_archive_member_over_uncompressed_size_limit(monkeypatch):
-    monkeypatch.setattr("src.parsing.docx_parser.MAX_DOCX_MEMBER_UNCOMPRESSED_BYTES", 10)
+    monkeypatch.setattr(
+        "src.parsing.docx_parser.MAX_DOCX_MEMBER_UNCOMPRESSED_BYTES", 10
+    )
     output = BytesIO()
     with ZipFile(output, "w", ZIP_DEFLATED) as archive:
         archive.writestr("large.xml", b"x" * 11)
@@ -44,7 +46,9 @@ def test_rejects_archive_member_over_uncompressed_size_limit(monkeypatch):
 
 
 def test_rejects_total_uncompressed_size_over_limit(monkeypatch):
-    monkeypatch.setattr("src.parsing.docx_parser.MAX_DOCX_MEMBER_UNCOMPRESSED_BYTES", 10)
+    monkeypatch.setattr(
+        "src.parsing.docx_parser.MAX_DOCX_MEMBER_UNCOMPRESSED_BYTES", 10
+    )
     monkeypatch.setattr("src.parsing.docx_parser.MAX_DOCX_UNCOMPRESSED_BYTES", 12)
     output = BytesIO()
     with ZipFile(output, "w", ZIP_DEFLATED) as archive:
